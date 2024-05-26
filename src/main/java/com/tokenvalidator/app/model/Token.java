@@ -1,21 +1,28 @@
 package com.tokenvalidator.app.model;
 
+
 public class Token {
     
-    String value;
+    private String token;
 
-    public Token( String value) {
-        this.value = value;
+    // Construtor que inicializa o token
+    
+    public Token(String token) {
+        this.token = token;
     }
+
+    // Construtor padrão
     public Token() {
       
     }
 
-    public String getValue() {
-        return this.value;
+    // Getter para o token
+    public String getToken() {
+        return token;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    // Setter para o token
+    public void setToken(String token) {
+        this.token = token;
     }
 }
