@@ -12,7 +12,7 @@
 	<description>Desafio de backend para validação de tokens</description>
 
 	<properties>
-		<java.version>22</java.version>
+		<java.version>17</java.version>
 		<spring-boot.version>2.7.2</spring-boot.version>
 	</properties>
 

@@ -1,4 +1,4 @@
-# Descrição
+﻿# Descrição
 
 Construa uma aplicação que exponha uma api web que recebe por parametros um JWT (string) e verifica se é valida conforme regras abaixo:
 
@@ -130,3 +130,56 @@ Esta etapa é eliminatória, e por isso esperamos que o código reflita essa imp
 Se tiver algum imprevisto, dúvida ou problema, por favor entre em contato com a gente, estamos aqui para ajudar.
 
 Nos envie o *link de um repo público* com a sua solução
+
+Validação de Tokens JWT
+
+Descrição
+Este projeto consiste em uma aplicação que valida tokens JWT (JSON Web Tokens) de acordo com um conjunto de regras. 
+É uma API REST que recebe um token JWT como entrada e retorna um booleano indicando se o token é válido ou não, seguindo as seguintes regras:
+
+O token deve ser válido.
+O token deve conter apenas três reivindicações (Name, Role e Seed).
+A reivindicação Name não pode conter caracteres numéricos.
+A reivindicação Role deve ser um dos seguintes valores: Admin, Member ou External.
+A reivindicação Seed deve ser um número primo.
+O comprimento máximo da reivindicação Name é de 256 caracteres.
+
+Tecnologias Utilizadas
+
+Java 17
+Spring Boot
+JJWT (Java JWT)
+
+Instruções para Execução
+
+Clone o repositório:https://github.com/Luanninha/AplicacaoJWT-DesafioItau
+
+git clone 
+
+Configuração do projeto:
+
+
+Inicie a classe Application, que dara inicio ao Spring boot 
+
+Testes:
+
+Utilize a coleção do Postman fornecida para realizar as chamadas de teste:
+
+URL para validação: http://localhost:8080/validate
+
+Métodos Implementados
+
+Validação do Token
+
+Os métodos de validação do token realizam as seguintes verificações:
+
+Verifica se o token é nulo ou vazio.
+Cria uma chave secreta para verificar o token.
+Analisa e valida o token JWT, obtendo as três claims ("Name", "Role" e "Seed").
+Valida se as claims são nulas, têm mais de 256 caracteres ou contêm números.
+Valida a claim "Role" - "Admin", "Member" ou "External".
+Valida se a claim "Seed" é um número primo.
+
+
+
+
